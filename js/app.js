@@ -17,7 +17,7 @@ function couponApply(){
     const couponCodeField = document.getElementById('coupon-field');
     const couponCode = couponCodeField.value;
     if(couponCode == 'stevekaku'){
-        const totalPrice = parseFloat(document.getElementById('total-price').innerText);
+        const totalPrice = parseFloat(document.getElementById('total-amount').innerText);
         //update total after coupon apply
         document.getElementById('total-price').innerText = totalPrice - ((totalPrice * 20) / 100);
         couponCodeField.value = '';

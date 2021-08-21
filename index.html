@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mac Book Pro</title>
+    <title>Mac Book Pro!</title>
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- custom css -->
@@ -27,29 +27,29 @@
                       <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores,7-core GPU,and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Mouse Magic Keyboard - US English</p>
                       <div class="mt-5">
                           <h4>Memory</h4>
-                          <button class="btn btn-outline-dark border border-2 rounded-3 fs-14">8GB unified memory</button>
-                          <button class="btn btn-outline-dark border border-2 rounded-3 fs-14">16GB unified memory</button>
+                          <button id="memory-8gb-btn" class="btn btn-outline-dark border border-2 rounded-3 fs-14">8GB unified memory</button>
+                          <button id="memory-16gb-btn" class="btn btn-outline-dark border border-2 rounded-3 fs-14">16GB unified memory</button>
                       </div>
                       <div class="mt-5">
                           <h4>Storage</h4>
-                          <button class="btn btn-outline-dark border border-2 rounded-3 fs-14">256GB SSD storage</button>
-                          <button class="btn btn-outline-dark border border-2 rounded-3 fs-14">512GB SSD storage</button>
-                          <button class="btn btn-outline-dark border border-2 rounded-3 fs-14">1TB SSD storage</button>
+                          <button id="storage-256gb-btn" class="btn btn-outline-dark border border-2 rounded-3 fs-14">256GB SSD storage</button>
+                          <button id="storage-512gb-btn" class="btn btn-outline-dark border border-2 rounded-3 fs-14">512GB SSD storage</button>
+                          <button id="storage-1tb-btn" class="btn btn-outline-dark border border-2 rounded-3 fs-14">1TB SSD storage</button>
                       </div>
                       <div class="mt-5">
                           <h4>Choose your delivery option</h4>
-                          <button class="btn btn-outline-dark border border-2 rounded-3 fs-14">Friday, Aug 25 FREE Prime Delivery</button>
-                          <button class="btn btn-outline-dark border border-2 rounded-3 fs-14">Friday, Aug 21 Delivery charge $20</button>
+                          <button id="delivery-free" class="btn btn-outline-dark border border-2 rounded-3 fs-14">Friday, Aug 25 FREE Prime Delivery</button>
+                          <button id="delivery-prime" class="btn btn-outline-dark border border-2 rounded-3 fs-14">Friday, Aug 21 Delivery charge $20</button>
                       </div>
                       <div class="mt-5">
                         <div class="row">
                             <div class="col-md-7">
-                               <h5 class="border-bottom fw-bold">Best Price<span style="padding-left: 160px;">$</span><span>1299</span></h5>
-                               <h5 class="border-bottom fw-bold">Extra Memory Cost<span style="padding-left: 69px;">$</span><span>0</span></h5>
-                               <h5 class="border-bottom fw-bold">Extra Storage Cost<span style="padding-left: 72px;">$</span><span>0</span></h5>
-                               <h5 class="fw-bold">Delivery Charge<span style="padding-left: 95px;">$</span><span>0</span></h5>
+                               <h5 class="border-bottom fw-bold">Best Price<span style="padding-left: 160px;">$</span><span id="best-price">1299</span></h5>
+                               <h5 class="border-bottom fw-bold">Extra Memory Cost<span style="padding-left: 69px;">$</span><span id="extra-memory-cost">0</span></h5>
+                               <h5 class="border-bottom fw-bold">Extra Storage Cost<span style="padding-left: 72px;">$</span><span id="extra-storage-cost">0</span></h5>
+                               <h5 class="fw-bold">Delivery Charge<span style="padding-left: 95px;">$</span><span id="delivery-charge">0</span></h5>
                                <hr style="border: 1px solid black">
-                               <h5 class="fw-bold">Total Price<span style="padding-left: 150px;">$</span><span>1299</span></h5>
+                               <h5 class="fw-bold">Total Price<span style="padding-left: 150px;">$</span><span id="total-amount">1299</span></h5>
                             </div>
                          </div>
                       </div>
@@ -58,8 +58,8 @@
                           <div class="row">
                               <div class="col-md-7">
                                 <div class="input-group">
-                                    <input type="text" class="form-control py-2" aria-describedby="coupon-btn">
-                                    <button class="btn bg-danger text-white rounded-3" type="button" id="coupon-btn">Apply</button>
+                                    <input id="coupon-field" type="text" class="form-control py-2" aria-describedby="coupon-btn">
+                                    <button onclick="couponApply()" class="btn bg-danger text-white rounded-3" type="button" id="coupon-btn">Apply</button>
                                   </div>
                               </div>
                           </div>
@@ -71,7 +71,7 @@
         </section>
         
         <section class="container mt-3">
-            <h1 class="text-center mt-4">Total: $<span>1299</span></h1>
+            <h1 class="text-center mt-4">Total: $<span id="total-price">1299</span></h1>
         </section>
     </main>
 
